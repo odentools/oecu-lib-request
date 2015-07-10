@@ -30,10 +30,16 @@ function library($arr) {
   $htmlDom = str_get_html($html);
 
   // 書名
-  $result = $htmlDom->find('#detailTblArea table tr')[5]->children(1)->getAttribute('plaintext');
-  $result = str_replace("\t", "", $result);
-  $result = str_replace("  ", "", $result);
-  $bookName = $result;
+  foreach($htmlDom->find('#detailTblArea table tr') as $val) {
+    if($val->children(0)->getAttribute('plaintext') == "書名/著者"){
+      $result = $val->children(1)->getAttribute('plaintext');
+      $result = str_replace("\t", "", $result);
+      $result = str_replace("  ", "", $result);
+      $bookName = $result;
+      }
+  }
+
+//echo $bookName;
 
   // 請求記号
   $bookCode = $htmlDom->find('#holdBookTblArea table tr')[1]->children(1)->getAttribute('plaintext');
@@ -48,9 +54,9 @@ function library($arr) {
    'tel'=>$arr['tel'],
    'bookName'=>$bookName,
    'bookId'=>$bookId,
-   'bookCode1'=>$bookCode[0],
-   'bookCode2'=>$bookCode[1],
-   'bookCode3'=>$bookCode[2],
+   'bookCode1'=>@$bookCode[0],
+   'bookCode2'=>@$bookCode[1],
+   'bookCode3'=>@$bookCode[2],
    'cPos'=>$arr['cPos']
   );
 
@@ -61,7 +67,8 @@ function library($arr) {
 
 // 文字列をSJISに変換するsjis関数
 function sjis($str) {
-  return mb_convert_encoding($str, 'SJIS', 'auto');
+  mb_language("Japanese");
+  return mb_convert_encoding($str, 'SJIS', 'UTF-8');
 }
 
 function libraryPDF($arr){
@@ -117,9 +124,9 @@ $pdf->setFont('SJIS', 'B', 7);
 // 書名
 $title = $arr['bookName'];
 $pdf->setXY(25, 64);
-$pdf->write(18, sjis(mb_substr($title, 0, 20)));
+$pdf->write(18, mb_substr(sjis($title), 0, 20));
 $pdf->setXY(25, 67);
-$pdf->write(18, sjis(mb_substr($title, 20, 20)));
+$pdf->write(18, mb_substr(sjis($title), 20, 20));
 
 
 // フォント設定変更

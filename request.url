@@ -1,0 +1,16 @@
+[InternetShortcut]
+URL=javascript:r=document.location.search.substring(1).match(/bibId=[0-9]*/)[0].replace(/bibId=/,"");window.open('http://oecu.pw/library/?bbid='+r+'&id=ht12a000&name=電通　太郎&cPos=nawate&tel=000-0000-0000');
+IDList=
+HotKey=0
+[{000214A0-0000-0000-C000-000000000046}]
+Prop3=19,15
+[Bookmarklet]
+ExtendedURL=javascript:r=document.location.search.substring(1).match(/bibId=[0-9]*/)[0].replace(/bibId=/,"");window.open('http://oecu.pw/library/?bbid='+r+'&id=ht12a000&name=電通　太郎&cPos=nawate&tel=000-0000-0000');
+[InternetShortcut.A]
+URL=javascript:r=document.location.search.substring(1).match(/bibId=[0-9]*/)[0].replace(/bibId=/,"");window.open('http://oecu.pw/library/?bbid='+r+'&id=ht12a000&name=電通　太郎&cPos=nawate&tel=000-0000-0000');
+[InternetShortcut.W]
+URL=javascript:r+AD0-document.location.search.substring(1).match(/bibId+AD0AWw-0-9+AF0AKg-/)+AFs-0+AF0-.replace(/bibId+AD0-/,+ACIAIg-)+ADs-window.open('http://oecu.pw/library/?bbid+AD0-'+-r+-'+ACY-id+AD0-ht12a000+ACY-name+AD2W+5AaMABZKpDOACY-cPos+AD0-nawate+ACY-tel+AD0-000-0000-0000')+ADs-
+[Bookmarklet.A]
+ExtendedURL=javascript:r=document.location.search.substring(1).match(/bibId=[0-9]*/)[0].replace(/bibId=/,"");window.open('http://oecu.pw/library/?bbid='+r+'&id=ht12a000&name=電通　太郎&cPos=nawate&tel=000-0000-0000');
+[Bookmarklet.W]
+ExtendedURL=javascript:r+AD0-document.location.search.substring(1).match(/bibId+AD0AWw-0-9+AF0AKg-/)+AFs-0+AF0-.replace(/bibId+AD0-/,+ACIAIg-)+ADs-window.open('http://oecu.pw/library/?bbid+AD0-'+-r+-'+ACY-id+AD0-ht12a000+ACY-name+AD2W+5AaMABZKpDOACY-cPos+AD0-nawate+ACY-tel+AD0-000-0000-0000')+ADs-
